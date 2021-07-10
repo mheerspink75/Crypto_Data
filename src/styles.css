@@ -2,27 +2,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(lightgray, whitesmoke);
   background-repeat: repeat-x;
-  text-align: center;
   margin-top: 2rem;
 }
 
 #h1 {
-  animation: glow 2s ease-in-out infinite alternate;
-}
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px greenyellow,
-      0 0 40px greenyellow, 0 0 50px greenyellow, 0 0 60px greenyellow,
-      0 0 70px greenyellow;
-  }
-
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px whitesmoke, 0 0 40px whitesmoke,
-      0 0 50px green, 0 0 60p green, 0 0 70px green, 0 0 80px whitesmoke;
-  }
+  font-size: small;
+  text-align: center;
 }
 
-#app {
+  #app {
   display: flex;
   justify-content: center;
 }
