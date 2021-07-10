@@ -45,6 +45,8 @@ const fetchSymbols = async () => {
 
   // Update Table
   for (const key of Object.keys(data.DISPLAY)) {
+    let key1 = data.DISPLAY[key].USD;
+
     let id = document.querySelector("#table");
     let newTr = document.createElement("tr");
     id.appendChild(newTr);
@@ -55,19 +57,19 @@ const fetchSymbols = async () => {
 
     let newTd2 = document.createElement("td");
     newTr.appendChild(newTd2);
-    newTd2.innerHTML = data.DISPLAY[key].USD.PRICE;
+    newTd2.innerHTML = key1.PRICE;
 
     let newTd3 = document.createElement("td");
     newTr.appendChild(newTd3);
-    newTd3.innerHTML = data.DISPLAY[key].USD.MKTCAP;
+    newTd3.innerHTML = key1.MKTCAP;
 
     let newTd4 = document.createElement("td");
     newTr.appendChild(newTd4);
-    newTd4.innerHTML = data.DISPLAY[key].USD.CHANGEPCT24HOUR + " %";
+    newTd4.innerHTML = key1.CHANGEPCT24HOUR + " %";
 
     let newTd5 = document.createElement("td");
     newTr.appendChild(newTd5);
-    newTd5.innerHTML = data.DISPLAY[key].USD.CHANGE24HOUR;
+    newTd5.innerHTML = key1.CHANGE24HOUR;
   }
 };
 
